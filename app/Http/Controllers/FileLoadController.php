@@ -22,7 +22,7 @@ class FileLoadController extends Controller
      * 1. Get data from file and validate it
      * 2. Show data in table
      *
-     * @param Request $request
+     * @param Request $reqduest
      * @return View
      */
     public function load(Request $request)
