@@ -122,7 +122,6 @@ class FileLoadService
     {
         foreach ($this->fileMapping as $column => $columnInfo) {
             $fieldValue = trim($rowData[$column]);
-            $columnDesc = $this->columnDescriptions[$column];
             $this->data[$rowNumber][$columnInfo['field']] = $this->validateColumn($fieldValue, $rowNumber, $columnInfo['validation']);
         }
     }
