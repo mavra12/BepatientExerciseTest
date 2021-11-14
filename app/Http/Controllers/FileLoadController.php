@@ -20,7 +20,7 @@ class FileLoadController extends Controller
     /**
      * Upload file and process it
      * 1. Get data from file and validate it
-     * 2. Show data in tableds
+     * 2. Show data in table
      *
      * @param Request $request
      * @return View
