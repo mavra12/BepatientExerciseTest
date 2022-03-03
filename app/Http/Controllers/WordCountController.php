@@ -33,7 +33,7 @@ class WordCountController extends Controller
 
         $wordCountingService = new WordCountingService();
 
-        $output = $wordCountingService->countWords($searchString);
+        $output = $wordCountingService::countWords($searchString);
 
         return view('wordCounter.word-count-content', [
                 'output' => $output
