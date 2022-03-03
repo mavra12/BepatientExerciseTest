@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FileLoadController;
+use App\Http\Controllers\CalculateBillController;
+use App\Http\Controllers\VideoSearchController;
+use App\Http\Controllers\WordCountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,15 @@ use App\Http\Controllers\FileLoadController;
 |
 */
 
- // File Load
-Route::get('/file-load', [FileLoadController::class,'index']);
-Route::post('/file-load', [FileLoadController::class,'load']);
+ // Calculate bill
+Route::get('billCalculator/calculate-bill', [CalculateBillController::class,'index']);
+Route::post('billCalculator/calculate-bill', [CalculateBillController::class,'load']);
+
+ // Search Video
+ Route::get('videoSearch/video-search', [VideoSearchController::class,'index']);
+ Route::post('videoSearch/video-search', [VideoSearchController::class,'load']);
+
+  // Word Counter
+  Route::get('wordCounter/word-count', [WordCountController::class,'index']);
+  Route::post('wordCounter/word-count', [WordCountController::class,'load']);
 

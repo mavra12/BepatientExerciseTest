@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Padua Financial Group Test</title>
+        <title>Bepatient Exercise Test</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -29,27 +29,34 @@
     </head>
     <body>
         <div class="container-fluid">
-            <h1>CSV File Load</h1>
+            <h1>Search DailyMotion Videos</h1>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default animated fadeIn">
                         <div class="panel-body">
-                            <form method="post" enctype="multipart/form-data" name="FileLoad" id="FileLoad">
+                            <form method="post" enctype="multipart/form-data" id="VideoSearchForm" name="VideoSearchForm">
                                 @csrf
                                 <div class="panel panel-default animated fadeIn">
                                     <div class="panel-heading">
-                                        Upload New CSV 
+                                        Search DailyMotion Videos
                                     </div>
                                     <div class="panel-body">
                                         <div class = "row required" >
-                                            <div class="col-xs-3"><label class="control-label">Select CSV to Upload&nbsp;</label></div>
+                                            <div class="col-xs-3"><label class="control-label">Enter any string to search a video&nbsp;</label></div>
                                             <div class="col-xs-8">
-                                                <input type="file" class="form-control" id="FileToLoad" name="FileToLoad">
+                                                <input type="text" class="form-control" id="searchString" name="searchString">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <div class = "row required" >
+                                            <div class="col-xs-3"><label class="control-label">Enter a channel Name&nbsp;</label></div>
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control" id="channelName" name="channelName">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="panel-footer panel-footer-white">
-                                        <button type="button" class ="btn btn-primary" onclick="loadFile()">Load File</button>
+                                        <button type="button" class ="btn btn-primary" onclick="searchVideos()">Submit</button>
                                     </div>
                                 </div>
                             </form>
@@ -64,6 +71,6 @@
         </div>	
         <!-- /.container-fluid -->
         <div id="content"></div>
-        <script src="{{ URL::asset('assets/js/file-load.js') }}"></script>
+        <script src="{{ URL::asset('assets/js/search-video.js') }}"></script>
     </body>
 </html>

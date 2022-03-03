@@ -1,10 +1,8 @@
 $(document).ready(function () {
-    var validate = $("#FileLoad").validate({
+    var validate = $("#EnergyBillsForm").validate({
         rules : {
-            FileToLoad : {
+            EnergyUnits : {
                 required : true,
-                minlength : 1,
-                maxlength : 255
             }
         },
         errorPlacement : function (error, element) {
@@ -13,16 +11,16 @@ $(document).ready(function () {
     });
 });
 
-function loadFile() {
-    if (!$("#FileLoad").valid()) {
+function CalculateEnergyCost() {
+    if (!$("#EnergyBillsForm").valid()) {
         return;
     }
 
-    var formData = new FormData($('#FileLoad')[0]);
+    var formData = new FormData($('#EnergyBillsForm')[0]);
 
     $.ajax({
         type : "POST",      
-        url : "file-load",
+        url : "calculate-bill",
         data : formData,
         async : true,
         cache : false,
