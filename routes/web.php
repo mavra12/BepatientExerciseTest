@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\CalculateBillController;
 use App\Http\Controllers\VideoSearchController;
 use App\Http\Controllers\WordCountController;
@@ -15,6 +17,9 @@ use App\Http\Controllers\WordCountController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+ // Calculate bill
+ Route::get('main-page', [MainPageController::class,'index']);
 
  // Calculate bill
 Route::get('billCalculator/calculate-bill', [CalculateBillController::class,'index']);
