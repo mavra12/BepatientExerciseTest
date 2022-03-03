@@ -66,6 +66,5 @@
         </div>	
         <!-- /.container-fluid -->
         <div id="content"></div>
-        <script src="{{ URL::asset('assets/js/main-page.js') }}"></script>
     </body>
 </html>

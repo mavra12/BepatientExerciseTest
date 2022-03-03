@@ -33,7 +33,7 @@ class VideoSearchController extends Controller
     {
 
         $rules = [
-            'channelName' => 'in:lifestyle, auto, videogames, music, news',
+            'channelName' => 'in:"lifestyle", "auto", "videogames", "music", "news"',
            ];
 
 
